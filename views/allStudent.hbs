@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>All Student</title>
+    <style>
+         body{
+        background-image: url("https://www.hoclaixevungtau.vn/wp-content/uploads/2016/11/background-car.jpg");
+        background-size: 100%;
+        color:wheat;
+    }
+    </style>
+</head>
+<body>
+    <form action="/doSearch" method="post">
+        Car manufacturer <input type="text" name="Carmanufacturer" id="">
+        <input type="submit" value="Search">
+    </form>
+    <br>
+    <a href="insert">Add new Car </a>
+    <hr>
+    <table class="table bordered">
+        <thead>
+             <tr>
+              <th>Id</th>
+              <th>Car manufacturer</th>
+              <th>Classify</th>  
+              <th>Year of manufacture</th>
+              <th>Color</th>
+              <th>Price</th>
+              <th>Delete</th>
+              <th>Update</th>
+            </tr>
+        </thead>
+        {{#each model}}
+        <tr>
+            <td>{{_id}} </td>
+            <td>{{CarManufacturer}} </td>
+            <td>{{Classify }}</td>
+            <td>{{YearOfManufacture }} </td>
+            <td>{{Color }} </td>
+            <td>{{Price }} </td>
+            <td><a href="/delete?id={{_id}}">Delete</a></td>
+            <td><a href="/update?id={{_id}} ">Update</a></td>
+        </tr>
+        {{/each}}
+    </table>
+
+</body>
+</html>

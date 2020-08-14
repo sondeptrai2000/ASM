@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>All Car</title>
+</head>
+<body>
+    <table class="table bordered">
+        <thead>
+             <tr>
+              <th>Id</th>
+              <th>Car manufacturer</th>
+              <th>Classify</th>  
+              <th>Year of manufacture</th>
+              <th>Color</th>
+              <th>Price</th>
+            </tr>
+        </thead>
+<form action="/doupdate" method="post">
+        {{#each model}}
+        <tr>
+            <td><input type="text" value= "{{_id}}" name = "txtId" id=""></td>
+            <td><input type="text" value= "{{CarManufacturer}}" name = "txtmanufacturer" id=""></td>
+            <td><input type="text" value= "{{Classify}}" name = "txtClassify" id="" ></td>
+            <td><input type="text" value= "{{YearOfManufacture}}" name = "txtYear" id=""></td>
+            <td><input type="text" value= "{{Color}}" name = "txtColor" id=""></td>
+            <td><input type="text" value= "{{Price}}" name = "txtPrice" id=""></td>
+            <td><input type="submit" value="Confirm"></td>
+        </tr>      
+        {{/each}}
+ </form>
+        
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Student</title>
+    <style>
+
+        body{
+        background-image: url("https://wallpaperaccess.com/full/16532.jpg");
+        background-size: 100%;
+    }
+            table{ 
+        margin: 0 auto;
+        width:500px;
+        height:50px;
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+    </style>
+</head>
+<body>
+    <form action="/doInsert" method="post">
+    <table style="text-align:left"> 
+    <tr>
+        <th>Car manufacturer</th>
+        <th><input type="text" name="txtmanufacturer" id=""></th>  
+        <th><label for="" style="color:white; blink: 1s">{{model.nameError}}</label></th>      
+    </tr>
+
+    <tr>
+        <th>Classify</th>
+        <th><input type="text" name="txtClassify" id=""></th>
+    </tr>
+        <th>Year of manufacture</th>
+        <th><input type="text" name="txtYear" id=""></th>
+    <tr>
+        <th>Color</th>
+        <th><input type="text" name="txtColor" id=""></th>
+    </tr>
+        <th>Price</th>
+        <th><input type="text" name="txtPrice" id=""></th>
+    <tr>
+        <th></th>
+        <th><input type="submit" value="Insert"></th>
+    </tr>
+    </table>
+    </form>
+</body>
+</html>
